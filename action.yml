@@ -11,6 +11,9 @@ inputs:
   path:
     description: 'Path to coverage file to upload'
     required: true
+  rootpath:
+    description: 'Path to coverage file to upload'
+    required: true
   flags:
     description: 'Flag upload to group coverage metrics (e.g. unittests | integration | ui,chrome)'
     required: false
@@ -28,5 +31,6 @@ runs:
     - ${{ inputs.token}}
     - ${{ inputs.flags}}
     - ${{ inputs.path}}
+    - ${{ inputs.rootpath}}
     - ${{ inputs.yml}}
 
